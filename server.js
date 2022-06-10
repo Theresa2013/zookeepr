@@ -55,6 +55,7 @@ function findById(id, animalsArray) {
 }
 
 function createNewAnimal(body, animalsArray) {
+<<<<<<< HEAD
     const animal = body;
     // our function's main code will go here!
     animalsArray.push(animal)
@@ -80,6 +81,13 @@ function validateAnimal(animal) {
         return false;
     }
     return true;
+=======
+    console.log(body);
+    // our function's main code will go here!
+
+    // return finished code to post route for response
+    return body;
+>>>>>>> c97090ba6eb70e35525950dfaafb1f00247a062c
 }
 
 app.get('/api/animals', (req, res) => {
@@ -104,6 +112,7 @@ app.post('/api/animals', (req, res) => {
     // set id based on what the next index of the array will be 
     req.body.id = animals.length.toString();
 
+<<<<<<< HEAD
     //if any data in req.body is incorrect, send 400 error back
     if (!validateAnimal(req.body)) {
         res.status(400).send("The animal is not properly formatted.");
@@ -117,6 +126,8 @@ app.post('/api/animals', (req, res) => {
 
 });
 
+=======
+>>>>>>> c97090ba6eb70e35525950dfaafb1f00247a062c
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}`);
 });
